@@ -14,7 +14,7 @@ async def on_ready():
 async def on_application_command_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
         await ctx.respond(f'This command is on cooldown, Try again in {round(error.retry_after)} seconds')
-directories = ["Fun commands", "./Utility Commands","./Embeds"]
+directories = ["Fun commands", "Utility Commands","./Embeds"]
 for directory in directories:
     for filename in os.listdir(directory):
         if filename.endswith(".py"):
