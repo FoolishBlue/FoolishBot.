@@ -2,8 +2,5 @@
   "dependencies": {
     "nodemon": "^2.0.20"
    
-  },
-  "scripts": {
-    "start": "python3 main.py"
-}
+  }
 }
