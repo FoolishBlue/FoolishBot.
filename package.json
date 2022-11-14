@@ -4,6 +4,6 @@
    
   },
   "scripts": {
-    "start": "node main.py"
+    "start": "py main.py"
 }
 }
