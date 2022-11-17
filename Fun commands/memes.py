@@ -12,13 +12,13 @@ class meme(commands.Cog):
     self.bot = bot
   @bridge.bridge_command(name='meme', description='meme command',pass_context=True)
   async def meme(self,ctx): 
-    await ctx.defer(ephemeral=True)
+    
     async with aiohttp.ClientSession() as cs:
         async with cs.get('https://www.reddit.com/r/memes.json') as r:
             res = await r.json()
             
             await ctx.send(res['data']['children'] [random.randint(0, 25)]['data']['url'])
-            await ctx.send('Meme Sent',ephemeral=True)
+          
         
 
 

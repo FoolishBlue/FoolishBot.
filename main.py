@@ -14,8 +14,11 @@ async def on_ready():
 async def on_application_command_error(ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
         await ctx.respond(f'This command is on cooldown, Try again in {round(error.retry_after)} seconds')
-
-
+WrongParam = discord.Embed(title="Missing Argument", description="Missing Argument in this command, you can use /help to find the information on this command.",color=discord.Color.blue())
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, discord.ext.commands.MissingRequiredArgument):
+        await ctx.send(embed = WrongParam, )
 
 directories = ["Fun commands", "Utility Commands","Embeds", "Other"]
 for directory in directories:

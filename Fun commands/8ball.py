@@ -8,7 +8,7 @@ class respect(commands.Cog):
   def __init__(self, bot):
     self.bot = bot
   @commands.command(name='8ball',description='Predict any question.')
-  async def _8ball(self,ctx,question):
+  async def _8ball(self,ctx,error,question = None):
     options = ["Nope",
           "Correct",
           "Yes.",
@@ -22,6 +22,10 @@ class respect(commands.Cog):
           "Im not going to give you an awnser right now, try again."
           "Not convinced"]
     await ctx.send(random.choice(options))
-   
+
+  
+  
+    
+    
 def setup(bot):
   bot.add_cog(respect(bot)) 

@@ -45,7 +45,7 @@ class Helpm(commands.Cog):
 
   @slash_command(name="help",description="Help and Infomation")
   async def help(self,ctx):
-    info=discord.Embed(title="FoolishBot Help",url="https://github.com/FoolishBlue/FoolishBot.",description="Hello, I am FoolishBlue's small discord bot made for a fun project to enhance his skills & for some fun :), This bot includes moderation commands, some fun commands & possibly economy in the future.",color=discord.Color.blue())
+    info=discord.Embed(title="FoolishBot Help",url="https://github.com/FoolishBlue/FoolishBot.",description="Hello, I am FoolishBlue's small discord bot made for a fun project to enhance his skills & for some fun :), My prefix is f! some of my commands will use f! but majority are going to be in slash commands, if you use /help you can get some information on me.",color=discord.Color.blue())
     info.set_author(name="FoolishBlue", url="https://github.com/FoolishBlue/FoolishBot.", icon_url="https://cdn.discordapp.com/attachments/1041776995660472320/1042173159778033674/download.png")
     
    
