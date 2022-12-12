@@ -20,7 +20,8 @@ async def on_command_error(ctx, error):
     if isinstance(error, discord.ext.commands.MissingRequiredArgument):
         await ctx.send(embed = WrongParam, )
 
-directories = ["Fun commands", "Utility Commands", "Other"]
+
+directories = ["Other"]
 for directory in directories:
     for filename in os.listdir(directory):
         if filename.endswith(".py"):
